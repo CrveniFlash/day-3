@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
     <title>Document</title>
   </head>
-  <body class="font-mono" style="background-color: #1a1a1d;">
-    <section class="flex flex-row justify-center items-center h-screen" style="background-color: ;">
+  <body onload="realClock()" class="font-mono" style="background-color: #1a1a1d;">
+    <section class="flex flex-row justify-center items-center h-screen">
       <div class="msg-box container bg-red-400 max-w-2xl rounded-md " style="background-color: #4e4e50;">
         <div class="nav text-center blood-red py-3 text-xl font-semibold">
           <h1>Message Sending App</h1>
@@ -45,7 +45,39 @@
         <div class="text-center text-gray-100">
           
           <p><i class="mr-4 text-red-700 fas fa-envelope-open"></i>You have sent <span id="msg-counter" class="text-red-700 font-bold text-xl"> 0 </span> Messages</p>
-          <p><a class="font-bold border-b-2 transition ease-in duration-75 hover:text-red-700 hover:border-red-700" href="#">Click</a> To Show Message History</p>
+          <button id="buttonmodal" class="show-model font-bold border-b-2 transition ease-in duration-75 hover:text-red-700 hover:border-red-700" href="" ">Click</button>
+          <span>To Show Message History</span>
+          <div id="modal"
+          class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center transform scale-0 transition-transform duration-300">
+          <!-- Modal content -->
+          <div class="bg-pink-800 w-1/2 h-2/3 flex flex-col p-12 rounded-md"> 
+              <!--Close modal button-->
+              <div class="flex flex-row-reverse justify-between mb-8">
+                <button id="closebutton" type="button" class="focus:outline-none">
+                  <!-- Hero icon - close button -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </button>
+                <div class="clock">
+                  <p id="dynamic-clock"></p>
+                </div>
+              </div>
+              <!-- Test content -->
+              <div class="text-xl">
+                <i class="fas fa-inbox"></i>
+                <h1>Messages</h1>
+              </div>
+              <div class="display-messages overflow-auto flex flex-col h-full ">
+                <div id="message-logs" class="mt-4 space-x-5">
+            
+                </div>
+
+              </div>
+          </div>
+      </div>
         </div>
         <footer class="flex flex-row justify-between mx-3 mt-5 text-lg">
           <div>
