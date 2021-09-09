@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+  </head>
+  <body class="font-mono" style="background-color: #1a1a1d;">
+    <section class="flex flex-row justify-center items-center h-screen" style="background-color: ;">
+      <div class="msg-box container bg-red-400 max-w-2xl rounded-md " style="background-color: #4e4e50;">
+        <div class="nav text-center blood-red py-3 text-xl font-semibold">
+          <h1>Message Sending App</h1>
+        </div>
+
+        <div class="mx-3 flex flex-col">
+          <p class="mb-1 mt-2 text-gray-100">Type Message Here:</p>
+          <form action="">
+            <input id="msg-input" class="w-full bg-transparent border-2 border-gray-400 rounded py-1 px-2 text-gray-100 
+            outline-none" type="text" placeholder="Type Here...">
+            
+          </form>
+          <div class="flex">
+            <input type="checkbox" id="show-hide-text" class="cursor-pointer">
+            <p class="text-gray-100 ml-3">Hide Message</p>
+          </div>
+        </div>
+
+        <div class="flex mt-3">
+          <button type="button" id="send-btn" class=" red w-full rounded shadow-xl mx-3 p-1 tracking-widest text-gray-100 font-bold text-xl">SEND</button>
+        </div>
+
+        <div class="m-3">
+          <h1 class="text-gray-100">Last Massage Delivered</h1>
+          <div>
+            <p id="msg-display" class="rounded  bg-gray-500 py-2 mt-2 text-gray-100 text-center tracking-widest font-semibold shadow-xl">Last Msg Here</p>
+          </div>
+        </div>
+
+        <div class="text-center text-gray-100">
+          
+          <p><i class="mr-4 text-red-700 fas fa-envelope-open"></i>You have sent <span id="msg-counter" class="text-red-700 font-bold text-xl"> 0 </span> Messages</p>
+          <p><a class="font-bold border-b-2 transition ease-in duration-75 hover:text-red-700 hover:border-red-700" href="#">Click</a> To Show Message History</p>
+        </div>
+        <footer class="flex flex-row justify-between mx-3 mt-5 text-lg">
+          <div>
+            <h1>© created By Allen V.</h1>
+          </div>
+          <div class="space-x-4 mr-4">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-github"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </footer>
+      </div>
+
+    </section>
+
+
+  </body>
+
+  <script src="https://kit.fontawesome.com/a06a7b7d60.js" crossorigin="anonymous"></script>
+  <script onload="" src="/public/script.js" defer ></script>
+</html>
