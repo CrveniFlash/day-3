@@ -68,16 +68,6 @@ function realClock() {
         return i;
     }
 
-    // let newTimeLog = `${h}:${m}:${s}`
-    // let timeLog = newTimeLog
-    // let timeSpan = document.createElement('span')
-    // timeSpan.appendChild()
-    // timeSpan.classList.add('ml-10')
-
-    // document.getElementById('message-logs').appendChild(timeSpan)
 
 }
 
-function messageLogs () {
-    
-}
